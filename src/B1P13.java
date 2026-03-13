@@ -1,15 +1,11 @@
 /**
  * Book My Stay App
  * Use Case 2: Basic Room Types & Static Availability
- *
- * Demonstrates abstraction, inheritance, polymorphism,
- * and simple room availability representation.
- *
  * @author Laxmi
  * @version 2.1
  */
 
-// Abstract class
+// Abstract Room class
 abstract class Room {
 
     protected int beds;
@@ -31,7 +27,6 @@ abstract class Room {
 
 // Single Room
 class SingleRoom extends Room {
-
     public SingleRoom() {
         super(1, 120, 2000);
     }
@@ -39,7 +34,6 @@ class SingleRoom extends Room {
 
 // Double Room
 class DoubleRoom extends Room {
-
     public DoubleRoom() {
         super(2, 200, 3500);
     }
@@ -47,20 +41,18 @@ class DoubleRoom extends Room {
 
 // Suite Room
 class SuiteRoom extends Room {
-
     public SuiteRoom() {
         super(3, 350, 7000);
     }
 }
 
-// Main Class
+// Main class
 public class B1P13 {
 
     public static void main(String[] args) {
 
         System.out.println("Book My Stay App");
         System.out.println("Hotel Booking System v2.1");
-        System.out.println("--------------------------");
 
         Room single = new SingleRoom();
         Room doubleRoom = new DoubleRoom();
